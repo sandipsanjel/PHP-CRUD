@@ -8,5 +8,5 @@ if ($un == "coding" && $pass == "tech") {
     // echo $un;
     header("location:menu.php");
 } else {
-    echo "invalid id password";
+    // echo "invalid id password";
 }
