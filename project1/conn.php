@@ -1,8 +1,8 @@
 
 <?php
-$conn=mysqli_connect("localhost","root","","project1");
+$conn=mysqli_connect("localhost","root","","registerdb");
 if($conn){
-    // echo "coneccted";
+    echo "conected";
 }
 else{
     echo "error";

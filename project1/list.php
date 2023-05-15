@@ -10,7 +10,7 @@
 <table border="=1">
     <tr>
         <th colspan=8 align="center">
-            Total loigns
+            Total logins
         </th>
     </tr>
        <th>SN: </th>

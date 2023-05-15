@@ -1,6 +1,7 @@
 <?php
 include("conn.php");
-
+session_start();
+$sun= $_SESSION["sun"];
 $name=$_POST['name'];
 $em=$_POST['email'];
 $sub=$_POST['subject'];

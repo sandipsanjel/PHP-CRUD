@@ -1,4 +1,7 @@
+<?php
+session_start()
 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -227,10 +230,15 @@ footer {
 }</style>
 <nav>
   <ul>
+  <li>
+            Loged in User : (<?php echo  $_SESSION["sun"]; ?>)
+  </li>
     <li><a href="#home">Home</a></li>
     <li><a href="#work">work</a></li>
     <li><a href="#about-me">About Me</a></li>
     <li><a href="#contact-me">Contact Me</a></li>
+    <li><a href="loginform.php">Login</a></li>
+    <li><a href="registerpro.php">Register</a></li>
   </ul>
 </nav>
   <body>

@@ -59,4 +59,3 @@ include("menu.php");
 </html>
 
 <?php
-// logi form in html code?
