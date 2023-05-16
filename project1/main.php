@@ -234,9 +234,9 @@ footer {
             Loged in User : (<?php echo  $_SESSION["sun"]; ?>)
   </li>
     <li><a href="#home">Home</a></li>
-    <li><a href="#work">work</a></li>
+    <li><a href="list.php">List</a></li>
     <li><a href="#about-me">About Me</a></li>
-    <li><a href="#contact-me">Contact Me</a></li>
+    <li><a href="form.php">Contact Me</a></li>
     <li><a href="loginform.php">Login</a></li>
     <li><a href="registerpro.php">Register</a></li>
   </ul>
@@ -307,7 +307,7 @@ footer {
           magni incidunt molestias ipsam magnam impedit ex nemo. Praesentium,
           voluptatem odit.
         </p>
-       <a   href="form.php">click here</a>
+       <!-- <a   href="form.php">click here</a> -->
       </div>
       <div class="About">
         <h2>About Me</h2>

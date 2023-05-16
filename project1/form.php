@@ -7,11 +7,12 @@
   <style>
     * {
       box-sizing: border-box;
+      /* padding: 10px; Reduce padding */
     }
 
     input[type=text], select, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 8px; /* Reduce padding */
       border: 1px solid #ccc;
       border-radius: 4px;
       resize: vertical;
@@ -19,13 +20,13 @@
 
     label {
       font-weight: bold;
-      margin-top: 12px;
+      margin-top: 8px; /* Reduce margin */
     }
 
     button[type=submit] {
       background-color: #4CAF50;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 16px; /* Reduce padding */
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -40,6 +41,9 @@
       border-radius: 5px;
       background-color: #f2f2f2;
       padding: 20px;
+      max-width: 400px; /* Limit width */
+      margin: 250px; /* Center align horizontally */
+      margin-top: 10px; /* Adjust vertical margin to center */
     }
 
     .row:after {
@@ -47,30 +51,14 @@
       display: table;
       clear: both;
     }
-
-    @media screen and (max-width: 600px) {
-      input[type=text], select, textarea {
-        width: 100%;
-      }
-
-      button[type=submit] {
-        width: 100%;
-        margin-top: 12px;
-      }
-    }
   </style>
 </head>
 
 <body>
   <h2>Contact Us</h2>
-<?php
 
-?>
-
-<form action="formpro.php" method="POST">
-
-  <div class="container">
-    <!-- <form action="#" method="post"> -->
+  <form action="formpro.php" method="POST">
+    <div class="container">
       <div class="row">
         <div class="col-25">
           <label for="name">Name</label>
@@ -109,16 +97,9 @@
         </div>
       </div>
       <div class="row">
-        <button  type="submit" >Submit</button>
+        <button type="submit">Submit</button>
       </div>
-    </form>
-  </div>
-
-  <!-- <script>
-    function submitForm() {
-      // Code to submit form data goes here
-      alert("Form submitted!");
-    }
-  </script> -->
+    </div>
+  </form>
 </body>
 </html>

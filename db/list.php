@@ -52,5 +52,41 @@ echo "<h1 >Employee Management System </h1>";
         <td colspan="7" align="center"><?php include("footer.php"); ?> </td>
     </tr>
 </table>
+<?php
 
-<!-- <a href="emp.php" type="button">Add more</a> -->
+
+// Assuming you have established a database connection
+
+$adminUsername = 'sandip'; // Set the username of the admin user
+$adminRole = 'admin'; // Set the role to 'admin'
+
+// Update the role for the admin user
+$sql = "UPDATE employee SET role='$adminRole' WHERE FirstName ='$adminUsername'";
+$result = mysqli_query($conn, $sql);
+
+
+
+// to be able to do del and update action only by admin
+// ...
+
+while ($r = mysqli_fetch_array($qry)) {
+    // ...
+
+    // Check if the logged-in user has the admin role
+    if ($_SESSION['role'] === 'admin') {
+        echo '<td>
+                <a href="del.php?id=' . $r['id'] . '">Delete</a>
+                <a href="update.php?id=' . $r['id'] . '">Update</a>
+              </td>';
+    } else {
+        echo '<td>Restricted</td>';
+    }
+
+    // ...
+}
+
+// ...
+
+
+?>
+
