@@ -1,6 +1,6 @@
 <?php
-// session_start();
-$sun= $_SESSION["sun"];
+session_start();
+$sun = $_SESSION["sun"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,7 +52,7 @@ $sun= $_SESSION["sun"];
             $sql = "SELECT * FROM task";
             $qry = mysqli_query($conn, $sql);
             while ($r = mysqli_fetch_array($qry)) {
-            ?>
+                ?>
                 <tr>
                     <td><?php echo $c; ?></td>
                     <td><?php echo $r["Name"]; ?></td>
@@ -65,15 +65,17 @@ $sun= $_SESSION["sun"];
 
                         $adminUsername = 'sandip'; // Set the username of the user to be assigned as admin
                         $adminRole = 'admin'; // Set the role to 'admin'
-                    
+
                         // Update the role for the specific user
                         $sql = "UPDATE task SET role='$adminRole' WHERE Name ='$adminUsername'";
                         $result = mysqli_query($conn, $sql);
 
-                        
                         if ($_SESSION['sun'] === 'sandip' && $r['role'] === 'admin') {
                             echo '<a href="del.php?id=' . $r['id'] . '">Delete</a>
-                                   <a href="update.php?id=' . $r['id'] . '">Update</a>';
+                                  <a href="update.php?id=' . $r['id'] . '">Update</a>';
+                        } elseif ($_SESSION['sun'] === 'sandip') {
+                            echo '<a href="del.php?id=' . $r['id'] . '">Delete</a>';
+                            
                         } else {
                             echo 'Restricted';
                         }

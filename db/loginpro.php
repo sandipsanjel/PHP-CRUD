@@ -9,11 +9,5 @@ if ($un == "sandip" && $pass == "tech") {
     header("location:menu.php");
 } else {
     // echo "invalid id password";
-}
-if ($un == "shiva" && $pass == "tech") {
-    $_SESSION["sun"] = $un;
-    // echo $un;
-    header("location:menu.php");
-} else {
-    // echo "invalid id password";
+
 }
