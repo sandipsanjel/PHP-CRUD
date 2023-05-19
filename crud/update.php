@@ -28,6 +28,7 @@ $r = mysqli_fetch_array($q);
                     <label> last name: </label>
                 </td>
                 <td>
+
                     <input type="text" name="lastname" id="lastname" value="<?php echo $r["SecondName"]; ?>">
                 </td>
             </tr>
