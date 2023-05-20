@@ -1,6 +1,6 @@
 <?php
 include("menu.php");
-echo "<h1 >Employee Management System </h1>";
+echo "<h1 colspan='7' align='center' >Employee Management System </h1>";
 ?>
 <table border=1 width=100%>
     <tr>
@@ -82,11 +82,8 @@ while ($r = mysqli_fetch_array($qry)) {
         echo '<td>Restricted</td>';
     }
 
-    // ...
+  
 }
-
-// ...
-
 
 ?>
 

@@ -1,10 +1,10 @@
 <?php
 session_start();
 ?>
-<table border="5" >
+<table border="1" >
 
 
-    <td colspan="3" align="center">menu</td>
+    <td colspan="5" align="center">menu</td>
     <tr>
 
         <td>
@@ -17,7 +17,7 @@ session_start();
             <a href="contact.php">Contact us</a>
         </td>
         <td>
-            Logged in User : (<?php echo  $_SESSION["sun"]; ?>)
+            User: <?php echo  $_SESSION["sun"]; ?>
         </td>
       
         <td>
