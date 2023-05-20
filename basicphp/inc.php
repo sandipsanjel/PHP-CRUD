@@ -11,7 +11,7 @@
 
 <?php
 require("test.php"); //to check the error we add test1
-$v = name("coding", "technology");
+$v = ("coding technology");
 echo $v;
 ?>
 
